@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Priority Calendar</h2>
+      <h4>~ color each day depending on what your task priority was / is ~</h4>
+      <p>Select priority:</p>
+      <div class="priority_container">
+        <button class="priority priority_1" id="priority_1">
+          <i class="fas fa-radiation"></i>
+        </button>
+        <button class="priority priority_2" id="priority_2">
+          <i class="fas fa-biohazard"></i>
+        </button>
+        <button class="priority priority_3" id="priority_3">
+          <i class="fas fa-exclamation"></i>
+        </button>
+        <button class="priority priority_4" id="priority_4">
+          <i class="fas fa-question"></i>
+        </button>
+        <button class="priority priority_5" id="priority_5">
+          <i class="fas fa-meh-rolling-eyes"></i>
+        </button>
+      </div>
+      <p>then click on the circles below</p>
+      <button id="randomize" class="action_btn randomize">
+        <i class="fas fa-random"></i>
+      </button>
+      <button id="clear" class="action_btn clear">
+        <i class="fas fa-sync"></i>
+      </button>
+      <div id="calendar" class="calendar"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
