@@ -1,4 +1,4 @@
-# Hi guys 👋, I created this following the guide provided by **[moods calendar](https://tinyurl.com/random-meal)** - Florin Pop as part of the #100Days100Projects and made it my own.
+# Hi guys 👋, I created this following the guide provided by **[moods calendar](https://tinyurl.com/mood-calendar)** - Florin Pop as part of the #100Days100Projects and made it my own.
 
 ---
 
