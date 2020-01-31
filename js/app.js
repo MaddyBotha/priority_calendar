@@ -116,7 +116,7 @@ let monthsHTML = "";
 // loop over the months and create a div for each month
 months.forEach((month, idx) => {
   monthsHTML += `<div class="months month_${idx}">
- <h3>${month}</h3>
+ <h3 class="bigger">${month}</h3>
  <div class="week_days_container">
  ${weekDays.map(day => `<div class="week_days">${day}</div>`).join("")}
  </div>
@@ -171,3 +171,9 @@ dates.forEach(date => {
 // let's add some click events for the .circle, .randomize as well as a clearing function that will clear the screen
 
 // add a click event listener to all .circle classes
+const circles = document.querySelectorAll(".circle");
+circles.forEach(circle => {
+  circle.addEventListener("click", () => {
+    circle.style.backgroundColor = activeColor;
+  });
+});

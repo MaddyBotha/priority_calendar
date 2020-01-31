@@ -3,26 +3,45 @@
 * 
  box-sizing: border-box
 
-// :root 
-// 	--mood-color-1: #2d6b5f
-// 	--mood-color-2: #72e3a6
-// 	--mood-color-3: #dff4c7
-// 	--mood-color-4: #edbf98
-// 	--mood-color-5: #ea3d36
-
 body 
 	font-family: 'Muli'
 	margin: 40px 0
+ background: #f953c6
+ /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #b91d73, #f953c6)
+ /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #b91d73, #f953c6)
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-h2 
+
+.gigantic, h2 
 	margin-bottom: 0
+ font-size: 110px
+ line-height: 1.09
+ letter-spacing: -2px
 
-h4 
+.bigger, h3
+ font-size: 26px
+ line-height: 1.38
+ color: #FFEFBA
+ letter-spacing: 0.1em
+ @media only screen and (max-width: 680px)
+  font-size: 22px
+
+.big, h4 
 	font-weight: 100
-	margin: 5px 0 20px
+	margin: 1.2em 0 20px
+ font-size: 22px
+ line-height: 1.38
+ @media only screen and (max-width: 680px)
+  font-size: 18px
 
-p 
+p
 	margin: 5px 0
+ font-size: 22px
+ line-height: 1.38
+ @media only screen and (max-width: 680px)
+  font-size: 18px
 
 .container 
 	max-width: 1000px
@@ -37,7 +56,7 @@ p
 
 .priority 
 	background-color: #fff
-	border: 1px solid black
+	border: 0
 	border-radius: 50%
 	color: #000
 	display: inline-flex
@@ -58,19 +77,19 @@ p
   transform: translateY(3px)
 
 .priority_1 
-	color: #2d6b5f
+	color: #AB05F2
 
 .priority_2 
-	color: #72e3a6
+	color: #7D07F2
 
 .priority_3 
-	color: #dff4c7
+	color: #5207F2
 
 .priority_4 
-	color: #edbf98
+	color: #23D9B7
 
 .priority_5 
-	color: #ea3d36
+	color: #D7F205
 
 .priority.selected 
 	background-color: currentColor
@@ -117,7 +136,8 @@ p
 
 .days,
 .week_days 
-	font-size: 14px
+	font-size: 16px
+ color: #FFEFBA
 	margin-bottom: 5px
 	height: calc(100% / 7)
 	width: calc(100% / 7)
@@ -125,14 +145,15 @@ p
 
 
 .days .circle 
-	background-color: #888
+	background-color: #fff
 	border-radius: 50%
-	color: #fff
+	color: #000
 	cursor: pointer
 	display: inline-flex
 	justify-content: center
 	align-items: center
 	font-size: 10px
+ font-weight: 600
 	width: 20px
 	height: 20px
 
