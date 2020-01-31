@@ -124,4 +124,50 @@ months.forEach((month, idx) => {
  </div>`;
 });
 
+// now that that's out of the way, let's create a calendar for the innerHTML and set it to equal monthsHTML
+
+// from here we will loop over each day and create extra day so that there are open slots available before we get to day 1 - 1st Jan
+
 calendar.innerHTML = monthsHTML;
+
+// before we loop over the emptySlot, let's create a function for it first
+function createEmptySlot() {
+  const emptyElement = document.createElement("div");
+  emptyElement.classList.add("days");
+
+  return emptyElement;
+}
+
+// let's also create the createDateElement function to avoid any errors
+function createDateElement(date) {
+  const day = date.getDate();
+  const dateElement = document.createElement("div");
+  dateElement.classList.add("days");
+  dateElement.innerHTML = `<span class="circle">${day}</span>`;
+
+  return dateElement;
+}
+
+// loop over each day
+dates.forEach(date => {
+  const month = date.getMonth();
+  const monthElement = document.querySelector(
+    `.month_${month} .days_container`
+  );
+
+  // let's create an extra day slot should we need it before day 1 starts
+  if (date.getDate() === 1 && date.getDate() !== 0) {
+    for (let i = 0; i < date.getDate(); i++) {
+      const emptySlot = createEmptySlot();
+
+      monthElement.appendChild(emptySlot);
+    }
+  }
+  const dateElement = createDateElement(date);
+
+  monthElement.appendChild(dateElement);
+});
+
+// let's add some click events for the .circle, .randomize as well as a clearing function that will clear the screen
+
+// add a click event listener to all .circle classes
