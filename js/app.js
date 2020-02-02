@@ -81,6 +81,7 @@ newPriority.forEach(priorityClicker => {
 function addDays(date, days) {
   let result = new Date(date);
   result.setDate(result.getDate() + days);
+  // console.log(result);
   return result;
 }
 
@@ -139,6 +140,7 @@ function createEmptySlot() {
 }
 
 // let's also create the createDateElement function to avoid any errors
+
 function createDateElement(date) {
   const day = date.getDate();
   const dateElement = document.createElement("div");
@@ -175,5 +177,24 @@ const circles = document.querySelectorAll(".circle");
 circles.forEach(circle => {
   circle.addEventListener("click", () => {
     circle.style.backgroundColor = activeColor;
+  });
+});
+
+// let's give some functionality to the randomize button which will randomly select color & days to fill with random priorities
+
+function getRandomColor() {
+  return colors[Math.floor(Math.random() * 5)];
+}
+
+randomize.addEventListener("click", () => {
+  circles.forEach(circle => {
+    circle.style.backgroundColor = getRandomColor();
+  });
+});
+
+// now we'll create the clear functionality so that we can clear the screen when we want to select different dates
+clear.addEventListener("click", () => {
+  circles.forEach(circle => {
+    circle.style.backgroundColor = defaultColor;
   });
 });
