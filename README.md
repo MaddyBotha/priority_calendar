@@ -4,7 +4,8 @@
 
 ## Project Thumbnail:
 
-<!-- <img src="./source/img/Screenshot.jpg" width="auto" height="auto" > -->
+<img src="/project_thumbnail.jpg" width="auto" height="auto">
+![project_thumbnail](project_thumbnail.jpg)
 
 ---
 
