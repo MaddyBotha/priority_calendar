@@ -5,7 +5,6 @@
 ## Project Thumbnail:
 
 <img src="/project_thumbnail.jpg" width="auto" height="auto">
-![project_thumbnail](project_thumbnail.jpg)
 
 ---
 
